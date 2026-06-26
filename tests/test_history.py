@@ -35,3 +35,11 @@ def test_history_save_load(tmp_path):
     h2.load(file)
 
     assert len(h2.show()) == 1
+
+def test_history_load_missing_file():
+    h = History()
+    h.load("file_that_does_not_exist.csv")
+
+    df = h.show()
+    assert df.empty
+

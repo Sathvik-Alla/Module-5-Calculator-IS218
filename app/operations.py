@@ -5,7 +5,7 @@ from app.exceptions import DivisionByZeroError
 class Operation(ABC):
     @abstractmethod
     def execute(self, a, b):
-        pass
+        pass   # <-- line 8 
 
 
 class Add(Operation):
